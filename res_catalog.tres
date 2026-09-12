@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://stoneframework_lite/res/res_catalog.gd" id="1"]
+[ext_resource type="Script" path="res://stoneframework_lite/res/res_pack_config.gd" id="2"]
+
+[sub_resource type="Resource" id="pack_0"]
+script = ExtResource("2")
+pack_id = &"common_ui"
+file_name = "common_ui.pck"
+is_public = true
+resource_paths = PackedStringArray("res://ui/common/common_trans/script/ui_common_trans.gd", "res://ui/common/common_trans/ui_common_trans.tscn")
+dependencies = Array[StringName]([])
+version = "1.0.0"
+sha256 = "a9e86a2f853319121dc5879bf981179900093c72429237982fba15dc193e8e3f"
+
+[sub_resource type="Resource" id="pack_1"]
+script = ExtResource("2")
+pack_id = &"ui_start"
+file_name = "ui_start.pck"
+is_public = false
+resource_paths = PackedStringArray("res://assets/font/WenYuanRoundedSC-Medium.subset.ttf", "res://stoneframework_lite/ui/ui_base.gd", "res://stoneframework_lite/ui/ui_config.gd", "res://ui/start/script/ui_start.gd", "res://ui/start/texture/main_bg.png", "res://ui/start/texture/main_logo.png", "res://ui/start/texture/main_title.png", "res://ui/start/ui_start.tscn", "res://ui/start/ui_start_config.tres")
+dependencies = Array[StringName]([])
+version = "1.0.0"
+sha256 = "e3a9ac3862e0a54a134773024e2255210e3a5e8259db50663a19122b5abca4ed"
+
+[resource]
+script = ExtResource("1")
+packs = Array[ExtResource("2")]([SubResource("pack_0"), SubResource("pack_1")])

@@ -1,0 +1,112 @@
+{
+	"created_at": "2026-09-12T16:21:11",
+	"excluded": [
+		{
+			"path": "res://define/README.md",
+			"reason": "文档不参与打包"
+		},
+		{
+			"path": "res://define/README.md",
+			"reason": "文档不参与打包"
+		},
+		{
+			"path": "res://script/README.md",
+			"reason": "文档不参与打包"
+		},
+		{
+			"path": "res://ui/common/common_trans/script/ui_common_trans.gd.uid",
+			"reason": "旧产物或由导出器处理的元数据"
+		},
+		{
+			"path": "res://ui/start/README.md",
+			"reason": "文档不参与打包"
+		},
+		{
+			"path": "res://ui/start/script/ui_start.gd.uid",
+			"reason": "旧产物或由导出器处理的元数据"
+		},
+		{
+			"path": "res://ui/start/texture/main_bg.png.import",
+			"reason": "旧产物或由导出器处理的元数据"
+		},
+		{
+			"path": "res://ui/start/texture/main_logo.png.import",
+			"reason": "旧产物或由导出器处理的元数据"
+		},
+		{
+			"path": "res://ui/start/texture/main_title.png.import",
+			"reason": "旧产物或由导出器处理的元数据"
+		}
+	],
+	"manifest": {
+		"engine_version": "4.7-stable (official)",
+		"packs": [
+			{
+				"dependencies": [],
+				"file": "common_ui.pck",
+				"is_public": true,
+				"pack_id": "common_ui",
+				"sha256": "a9e86a2f853319121dc5879bf981179900093c72429237982fba15dc193e8e3f",
+				"size_bytes": 2876
+			},
+			{
+				"dependencies": [],
+				"file": "ui_start.pck",
+				"is_public": false,
+				"pack_id": "ui_start",
+				"sha256": "e3a9ac3862e0a54a134773024e2255210e3a5e8259db50663a19122b5abca4ed",
+				"size_bytes": 1796140
+			}
+		],
+		"platform": "小游戏",
+		"profile_id": "1789109816_5_1823418622",
+		"release_version": "1.0.0",
+		"resources": {
+			"res://assets/font/WenYuanRoundedSC-Medium.subset.ttf": "ui_start",
+			"res://stoneframework_lite/ui/ui_base.gd": "ui_start",
+			"res://stoneframework_lite/ui/ui_config.gd": "ui_start",
+			"res://ui/common/common_trans/script/ui_common_trans.gd": "common_ui",
+			"res://ui/common/common_trans/ui_common_trans.tscn": "common_ui",
+			"res://ui/start/script/ui_start.gd": "ui_start",
+			"res://ui/start/texture/main_bg.png": "ui_start",
+			"res://ui/start/texture/main_logo.png": "ui_start",
+			"res://ui/start/texture/main_title.png": "ui_start",
+			"res://ui/start/ui_start.tscn": "ui_start",
+			"res://ui/start/ui_start_config.tres": "ui_start"
+		},
+		"schema_version": 1
+	},
+	"metadata": {
+		".godot/global_script_class_cache.cfg": "客户端元数据，不覆盖主项目",
+		".godot/uid_cache.bin": "客户端元数据，不覆盖主项目",
+		"project.binary": "客户端元数据，不覆盖主项目"
+	},
+	"physical_files": {
+		".godot/exported/133200997/export-689fb8ec6661ce119a4c5c5a625997df-ui_start_config.res": "ui_start",
+		".godot/exported/133200997/export-e8df6bcc049f166b3fea5dd5462d8d04-ui_common_trans.scn": "common_ui",
+		".godot/exported/133200997/export-ea4636c9681c084801d63140c09118bf-ui_start.scn": "ui_start",
+		".godot/imported/WenYuanRoundedSC-Medium.subset.ttf-1ea68472b264811aa2836d119be22efb.fontdata": "ui_start",
+		".godot/imported/main_bg.png-a9fa564cfb9fafa95c47e49be1161d2d.ctex": "ui_start",
+		".godot/imported/main_logo.png-9aa7b43768e788b920ebd724906b21f6.ctex": "ui_start",
+		".godot/imported/main_title.png-82ddfd695196d58de4007148727b6b77.ctex": "ui_start",
+		"assets/font/WenYuanRoundedSC-Medium.subset.ttf.import": "ui_start",
+		"stoneframework_lite/ui/ui_base.gd.remap": "ui_start",
+		"stoneframework_lite/ui/ui_base.gdc": "ui_start",
+		"stoneframework_lite/ui/ui_config.gd.remap": "ui_start",
+		"stoneframework_lite/ui/ui_config.gdc": "ui_start",
+		"ui/common/common_trans/script/ui_common_trans.gd.remap": "common_ui",
+		"ui/common/common_trans/script/ui_common_trans.gdc": "common_ui",
+		"ui/common/common_trans/ui_common_trans.tscn.remap": "common_ui",
+		"ui/start/script/ui_start.gd.remap": "ui_start",
+		"ui/start/script/ui_start.gdc": "ui_start",
+		"ui/start/texture/main_bg.png.import": "ui_start",
+		"ui/start/texture/main_logo.png.import": "ui_start",
+		"ui/start/texture/main_title.png.import": "ui_start",
+		"ui/start/ui_start.tscn.remap": "ui_start",
+		"ui/start/ui_start_config.tres.remap": "ui_start"
+	},
+	"profile_id": "1789109816_5_1823418622",
+	"warnings": [
+		"小游戏导出已完成，但原生进程退出异常（退出码 -1073741819）；产物将继续接受完整校验。"
+	]
+}

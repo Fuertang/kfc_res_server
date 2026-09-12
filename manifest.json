@@ -1,0 +1,38 @@
+{
+	"engine_version": "4.7-stable (official)",
+	"packs": [
+		{
+			"dependencies": [],
+			"file": "common_ui.pck",
+			"is_public": true,
+			"pack_id": "common_ui",
+			"sha256": "a9e86a2f853319121dc5879bf981179900093c72429237982fba15dc193e8e3f",
+			"size_bytes": 2876
+		},
+		{
+			"dependencies": [],
+			"file": "ui_start.pck",
+			"is_public": false,
+			"pack_id": "ui_start",
+			"sha256": "e3a9ac3862e0a54a134773024e2255210e3a5e8259db50663a19122b5abca4ed",
+			"size_bytes": 1796140
+		}
+	],
+	"platform": "小游戏",
+	"profile_id": "1789109816_5_1823418622",
+	"release_version": "1.0.0",
+	"resources": {
+		"res://assets/font/WenYuanRoundedSC-Medium.subset.ttf": "ui_start",
+		"res://stoneframework_lite/ui/ui_base.gd": "ui_start",
+		"res://stoneframework_lite/ui/ui_config.gd": "ui_start",
+		"res://ui/common/common_trans/script/ui_common_trans.gd": "common_ui",
+		"res://ui/common/common_trans/ui_common_trans.tscn": "common_ui",
+		"res://ui/start/script/ui_start.gd": "ui_start",
+		"res://ui/start/texture/main_bg.png": "ui_start",
+		"res://ui/start/texture/main_logo.png": "ui_start",
+		"res://ui/start/texture/main_title.png": "ui_start",
+		"res://ui/start/ui_start.tscn": "ui_start",
+		"res://ui/start/ui_start_config.tres": "ui_start"
+	},
+	"schema_version": 1
+}
