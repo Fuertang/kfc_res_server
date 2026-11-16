@@ -1,0 +1,2 @@
+# PCK 打包器的本地输出目录；线上发布使用 kungfucook/wechat/。
+/hotupdate/
