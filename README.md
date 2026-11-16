@@ -7,8 +7,8 @@
 1. 如果任何 PCK 内容改变，先在 Godot 的 `wechat_hotupdate.tres` 方案中递增 `release_version`。不要覆盖已经发布的版本目录或以相同版本替换 PCK。只改首包脚本或配置且四包摘要未变时，不必重新发布热更资源。
 2. 在 Godot 中用“项目 → 工具 → PCK 打包”选择“微信美术音频热更”，执行**完整构建**。当前方案输出到仓库根目录的 `hotupdate/wechat/<版本>/`，生成四个 PCK、`chunks.json`、`manifest.json`、`res_catalog.tres` 和构建报告。完整构建还会同步游戏工程中的资源归属表和首包内嵌清单。
 3. 在资源仓库中先同步远端，再将四个 PCK、`chunks.json` 和 `manifest.json` 复制到 `kungfucook/wechat/releases/<版本>/`。核对文件大小、完整 SHA-256 和清单版本。只暂存该版本目录，提交并推送。
-4. 等 GitHub Pages 上该版本的四个 PCK、`chunks.json` 与 `manifest.json` 全部可访问，再把**同一份** `manifest.json` 复制为 `kungfucook/wechat/latest.json`，单独提交并推送。修改 `latest.json` 会让已发布的旧小游戏客户端看到新版本，须先确认兼容性和发布时间。
-5. 导出微信小游戏首包，核对整个上传目录小于 20,000,000 字节。在微信开发者工具验证版本检查、下载、断点续下、四包挂载、开始页视频和 Gameplay，然后发布小游戏。
+4. 等 GitHub Pages 上该版本的四个 PCK、`chunks.json` 与 `manifest.json` 全部可访问。导出微信小游戏首包，核对整个上传目录小于 20,000,000 字节；在微信开发者工具验证版本检查、下载、断点续下、四包挂载、开始页视频和 Gameplay。新首包的内嵌清单已指向该版本，因此即使线上 `latest.json` 仍是旧版本，也可验证新首包。
+5. 确定发布窗口并确认已发布旧客户端能使用新资源后，把**同一份** `manifest.json` 复制为 `kungfucook/wechat/latest.json`，单独提交并推送，再发布或同步上线小游戏。修改 `latest.json` 会让已发布的旧小游戏客户端看到新版本；如果不兼容，先安排客户端升级策略，不要提前切换入口。
 
 ## PowerShell 操作示例
 
@@ -55,7 +55,7 @@ git -C $repo commit -m "发布厨侠微信热更资源 $ver"
 git -C $repo push origin master
 ```
 
-等待 Pages 部署，确认六个版本文件都可访问（下列检查均应返回 `200`），且客户端兼容后，再发布版本入口：
+等待 Pages 部署，确认六个版本文件都可访问（下列检查均应返回 `200`），并完成新首包测试：
 
 ```powershell
 foreach ($name in $files) {
@@ -65,7 +65,7 @@ foreach ($name in $files) {
 }
 ```
 
-发布版本入口：
+确定发布窗口、核对旧客户端兼容性后，再发布版本入口：
 
 ```powershell
 Copy-Item -LiteralPath (Join-Path $release 'manifest.json') -Destination (Join-Path $repo 'kungfucook/wechat/latest.json') -Force
